@@ -1,0 +1,1630 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>26/8/24</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Feb 29 09:17:35 IST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>1671 seconds (1671346 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To test the SigUp functionality of Chiltern Oak page", "SignUp fuctionality"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;errors&apos;]/ul/li&quot;}
+  (Session info: chrome=122.0.6261.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a6aa16eade13f8824dae335e999d81b9, findElement {using=xpath, value=//div[@class=&apos;errors&apos;]/ul/li}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60985}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60985/devtoo..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a6aa16eade13f8824dae335e999d81b9
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.getText(Unknown Source)
+	at com.project.rll.pages.SignUpPage.validate_confirm(SignUpPage.java:104)
+	at com.project.rll.steps.SignUpStepDefs.the_user_should_see_the_status_as(SignUpStepDefs.java:63)
+	at ✽.the user should see the status as &quot;This email address is already associated with an account.&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Asignup.feature:11)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1810373096", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1810373096'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;errors&apos;]/ul/li&quot;}
+  (Session info: chrome=122.0.6261.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a6aa16eade13f8824dae335e999d81b9, findElement {using=xpath, value=//div[@class=&apos;errors&apos;]/ul/li}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60985}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60985/devtoo..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a6aa16eade13f8824dae335e999d81b9
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.getText(Unknown Source)
+	at com.project.rll.pages.SignUpPage.validate_confirm(SignUpPage.java:104)
+	at com.project.rll.steps.SignUpStepDefs.the_user_should_see_the_status_as(SignUpStepDefs.java:63)
+	at ✽.the user should see the status as &quot;This email address is already associated with an account.&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Asignup.feature:11)
+</pre></div></td>
+<td>27</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To test the SigUp functionality of Chiltern Oak page", "SignUp fuctionality"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;errors&apos;]/ul/li&quot;}
+  (Session info: chrome=122.0.6261.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [16a7d258fafd4cbbe3e7839356c2bc94, findElement {using=xpath, value=//div[@class=&apos;errors&apos;]/ul/li}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60096}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60096/devtoo..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 16a7d258fafd4cbbe3e7839356c2bc94
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.getText(Unknown Source)
+	at com.project.rll.pages.SignUpPage.validate_confirm(SignUpPage.java:104)
+	at com.project.rll.steps.SignUpStepDefs.the_user_should_see_the_status_as(SignUpStepDefs.java:63)
+	at ✽.the user should see the status as &quot;Email can&apos;t be blanK.&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Asignup.feature:11)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1872025109", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1872025109'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;errors&apos;]/ul/li&quot;}
+  (Session info: chrome=122.0.6261.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [16a7d258fafd4cbbe3e7839356c2bc94, findElement {using=xpath, value=//div[@class=&apos;errors&apos;]/ul/li}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60096}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60096/devtoo..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 16a7d258fafd4cbbe3e7839356c2bc94
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.getText(Unknown Source)
+	at com.project.rll.pages.SignUpPage.validate_confirm(SignUpPage.java:104)
+	at com.project.rll.steps.SignUpStepDefs.the_user_should_see_the_status_as(SignUpStepDefs.java:63)
+	at ✽.the user should see the status as &quot;Email can&apos;t be blanK.&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Asignup.feature:11)
+</pre></div></td>
+<td>25</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User login with different credentials by using excel", "Login Functionality"</td>
+<td><div><pre>junit.framework.ComparisonFailure: expected:&lt;...noakfurniture.co.uk/[challenge]&gt; but was:&lt;...noakfurniture.co.uk/[account/login?return_url=%2Faccount]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at com.project.rll.steps.LoginStepDefs.verify_user_is_able_to_login_checking(LoginStepDefs.java:60)
+	at ✽.verify user is able to login checking &quot;https://www.chilternoakfurniture.co.uk/account/login?return_url=%2Faccount&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Blogin.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace812245416", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace812245416'><pre>junit.framework.ComparisonFailure: expected:&lt;...noakfurniture.co.uk/[challenge]&gt; but was:&lt;...noakfurniture.co.uk/[account/login?return_url=%2Faccount]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at com.project.rll.steps.LoginStepDefs.verify_user_is_able_to_login_checking(LoginStepDefs.java:60)
+	at ✽.verify user is able to login checking &quot;https://www.chilternoakfurniture.co.uk/account/login?return_url=%2Faccount&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Blogin.feature:8)
+</pre></div></td>
+<td>33</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To test the SigUp functionality of Chiltern Oak page", "SignUp fuctionality"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;errors&apos;]/ul/li&quot;}
+  (Session info: chrome=122.0.6261.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3a05eb5d71b767f54e3dd096b9b5cc1d, findElement {using=xpath, value=//div[@class=&apos;errors&apos;]/ul/li}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62222}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62222/devtoo..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3a05eb5d71b767f54e3dd096b9b5cc1d
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.getText(Unknown Source)
+	at com.project.rll.pages.SignUpPage.validate_confirm(SignUpPage.java:104)
+	at com.project.rll.steps.SignUpStepDefs.the_user_should_see_the_status_as(SignUpStepDefs.java:63)
+	at ✽.the user should see the status as &quot;This email address is already associated with an account.&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Asignup.feature:11)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1832708008", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1832708008'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;errors&apos;]/ul/li&quot;}
+  (Session info: chrome=122.0.6261.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3a05eb5d71b767f54e3dd096b9b5cc1d, findElement {using=xpath, value=//div[@class=&apos;errors&apos;]/ul/li}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62222}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62222/devtoo..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3a05eb5d71b767f54e3dd096b9b5cc1d
+	at jdk.internal.reflect.GeneratedConstructorAccessor50.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.getText(Unknown Source)
+	at com.project.rll.pages.SignUpPage.validate_confirm(SignUpPage.java:104)
+	at com.project.rll.steps.SignUpStepDefs.the_user_should_see_the_status_as(SignUpStepDefs.java:63)
+	at ✽.the user should see the status as &quot;This email address is already associated with an account.&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Asignup.feature:11)
+</pre></div></td>
+<td>25</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To test the SigUp functionality of Chiltern Oak page", "SignUp fuctionality"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;errors&apos;]/ul/li&quot;}
+  (Session info: chrome=122.0.6261.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e2ad20ea7733e2cef52a2ff415cbe7b5, findElement {using=xpath, value=//div[@class=&apos;errors&apos;]/ul/li}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61611}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61611/devtoo..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e2ad20ea7733e2cef52a2ff415cbe7b5
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.getText(Unknown Source)
+	at com.project.rll.pages.SignUpPage.validate_confirm(SignUpPage.java:104)
+	at com.project.rll.steps.SignUpStepDefs.the_user_should_see_the_status_as(SignUpStepDefs.java:63)
+	at ✽.the user should see the status as &quot;Password can&apos;t be blank.&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Asignup.feature:11)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1209969531", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1209969531'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;errors&apos;]/ul/li&quot;}
+  (Session info: chrome=122.0.6261.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e2ad20ea7733e2cef52a2ff415cbe7b5, findElement {using=xpath, value=//div[@class=&apos;errors&apos;]/ul/li}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61611}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61611/devtoo..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e2ad20ea7733e2cef52a2ff415cbe7b5
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.getText(Unknown Source)
+	at com.project.rll.pages.SignUpPage.validate_confirm(SignUpPage.java:104)
+	at com.project.rll.steps.SignUpStepDefs.the_user_should_see_the_status_as(SignUpStepDefs.java:63)
+	at ✽.the user should see the status as &quot;Password can&apos;t be blank.&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Asignup.feature:11)
+</pre></div></td>
+<td>49</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User login with different credentials by using excel", "Login Functionality"</td>
+<td><div><pre>junit.framework.ComparisonFailure: expected:&lt;...noakfurniture.co.uk/[challenge]&gt; but was:&lt;...noakfurniture.co.uk/[account/login?return_url=%2Faccount]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at com.project.rll.steps.LoginStepDefs.verify_user_is_able_to_login_checking(LoginStepDefs.java:60)
+	at ✽.verify user is able to login checking &quot;https://www.chilternoakfurniture.co.uk/account/login?return_url=%2Faccount&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Blogin.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1404467121", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1404467121'><pre>junit.framework.ComparisonFailure: expected:&lt;...noakfurniture.co.uk/[challenge]&gt; but was:&lt;...noakfurniture.co.uk/[account/login?return_url=%2Faccount]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at com.project.rll.steps.LoginStepDefs.verify_user_is_able_to_login_checking(LoginStepDefs.java:60)
+	at ✽.verify user is able to login checking &quot;https://www.chilternoakfurniture.co.uk/account/login?return_url=%2Faccount&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Blogin.feature:8)
+</pre></div></td>
+<td>31</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To test the SigUp functionality of Chiltern Oak page", "SignUp fuctionality"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;errors&apos;]/ul/li&quot;}
+  (Session info: chrome=122.0.6261.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6302633ba9b0b9cae02aed52f1a4b2b3, findElement {using=xpath, value=//div[@class=&apos;errors&apos;]/ul/li}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59493}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59493/devtoo..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6302633ba9b0b9cae02aed52f1a4b2b3
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.getText(Unknown Source)
+	at com.project.rll.pages.SignUpPage.validate_confirm(SignUpPage.java:104)
+	at com.project.rll.steps.SignUpStepDefs.the_user_should_see_the_status_as(SignUpStepDefs.java:63)
+	at ✽.the user should see the status as &quot;Password is too short (minimum is 5 characters)&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Asignup.feature:11)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace868144931", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace868144931'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;errors&apos;]/ul/li&quot;}
+  (Session info: chrome=122.0.6261.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6302633ba9b0b9cae02aed52f1a4b2b3, findElement {using=xpath, value=//div[@class=&apos;errors&apos;]/ul/li}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59493}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59493/devtoo..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6302633ba9b0b9cae02aed52f1a4b2b3
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.getText(Unknown Source)
+	at com.project.rll.pages.SignUpPage.validate_confirm(SignUpPage.java:104)
+	at com.project.rll.steps.SignUpStepDefs.the_user_should_see_the_status_as(SignUpStepDefs.java:63)
+	at ✽.the user should see the status as &quot;Password is too short (minimum is 5 characters)&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Asignup.feature:11)
+</pre></div></td>
+<td>25</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User login with different credentials by using excel", "Login Functionality"</td>
+<td><div><pre>junit.framework.ComparisonFailure: expected:&lt;...niture.co.uk/account[/login?return_url=%2Faccount]&gt; but was:&lt;...niture.co.uk/account[]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at com.project.rll.steps.LoginStepDefs.verify_user_is_able_to_login_checking(LoginStepDefs.java:60)
+	at ✽.verify user is able to login checking &quot;https://www.chilternoakfurniture.co.uk/account&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Blogin.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1979395285", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1979395285'><pre>junit.framework.ComparisonFailure: expected:&lt;...niture.co.uk/account[/login?return_url=%2Faccount]&gt; but was:&lt;...niture.co.uk/account[]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at com.project.rll.steps.LoginStepDefs.verify_user_is_able_to_login_checking(LoginStepDefs.java:60)
+	at ✽.verify user is able to login checking &quot;https://www.chilternoakfurniture.co.uk/account&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Blogin.feature:8)
+</pre></div></td>
+<td>9</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Testing of ContactUs Page", "Test Chilternoak Furniture contact us page"</td>
+<td></td>
+<td>50</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "add 3 different products to cart1", "Test cart functionality"</td>
+<td></td>
+<td>42</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "add to cart", "Test cart functionality"</td>
+<td></td>
+<td>24</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Enter  search term and verify  results", "Product Search Functionality"</td>
+<td></td>
+<td>8</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Filter Functionality search the product", "Filter functionality"</td>
+<td></td>
+<td>11</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "add to cart an invalid item", "Test cart functionality"</td>
+<td></td>
+<td>11</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Subscribe scenario with differe set of data", "Subscribe Feature"</td>
+<td></td>
+<td>13</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User login with different credentials by using excel", "Login Functionality"</td>
+<td></td>
+<td>27</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User login with different credentials by using excel", "Login Functionality"</td>
+<td></td>
+<td>9</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Enter  search term and verify  results", "Product Search Functionality"</td>
+<td></td>
+<td>10</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Testing of ContactUs Page", "Test Chilternoak Furniture contact us page"</td>
+<td></td>
+<td>50</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Testing of ContactUs Page", "Test Chilternoak Furniture contact us page"</td>
+<td></td>
+<td>30</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Subscribe scenario with differe set of data", "Subscribe Feature"</td>
+<td></td>
+<td>13</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User login with different credentials by using excel", "Login Functionality"</td>
+<td></td>
+<td>9</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Enter  search term and verify  results", "Product Search Functionality"</td>
+<td></td>
+<td>27</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Increasing the quantity of item", "Test cart functionality"</td>
+<td></td>
+<td>40</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Subscribe scenario with differe set of data", "Subscribe Feature"</td>
+<td></td>
+<td>30</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Filter Functionality for choose color", "Filter functionality"</td>
+<td></td>
+<td>39</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Testing of ContactUs Page", "Test Chilternoak Furniture contact us page"</td>
+<td></td>
+<td>31</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Enter  search term and verify  results", "Product Search Functionality"</td>
+<td></td>
+<td>27</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Filter Functionality for drag the price", "Filter functionality"</td>
+<td></td>
+<td>18</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Testing of ContactUs Page", "Test Chilternoak Furniture contact us page"</td>
+<td></td>
+<td>33</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Filter Functionality for choose style", "Filter functionality"</td>
+<td></td>
+<td>13</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User login with different credentials by using excel", "Login Functionality"</td>
+<td></td>
+<td>50</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Subscribe scenario with differe set of data", "Subscribe Feature"</td>
+<td></td>
+<td>32</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Enter  search term and verify  results", "Product Search Functionality"</td>
+<td></td>
+<td>33</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User login with different credentials by using excel", "Login Functionality"</td>
+<td><div><pre>junit.framework.ComparisonFailure: expected:&lt;...noakfurniture.co.uk/[challenge]&gt; but was:&lt;...noakfurniture.co.uk/[account/login?return_url=%2Faccount]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at com.project.rll.steps.LoginStepDefs.verify_user_is_able_to_login_checking(LoginStepDefs.java:60)
+	at ✽.verify user is able to login checking &quot;https://www.chilternoakfurniture.co.uk/account/login?return_url=%2Faccount&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Blogin.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2132014035", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2132014035'><pre>junit.framework.ComparisonFailure: expected:&lt;...noakfurniture.co.uk/[challenge]&gt; but was:&lt;...noakfurniture.co.uk/[account/login?return_url=%2Faccount]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at com.project.rll.steps.LoginStepDefs.verify_user_is_able_to_login_checking(LoginStepDefs.java:60)
+	at ✽.verify user is able to login checking &quot;https://www.chilternoakfurniture.co.uk/account/login?return_url=%2Faccount&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Blogin.feature:8)
+</pre></div></td>
+<td>54</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User login with different credentials by using excel", "Login Functionality"</td>
+<td><div><pre>junit.framework.ComparisonFailure: expected:&lt;...noakfurniture.co.uk/[challenge]&gt; but was:&lt;...noakfurniture.co.uk/[account/login?return_url=%2Faccount]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at com.project.rll.steps.LoginStepDefs.verify_user_is_able_to_login_checking(LoginStepDefs.java:60)
+	at ✽.verify user is able to login checking &quot;https://www.chilternoakfurniture.co.uk/account/login?return_url=%2Faccount&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Blogin.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace887664233", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace887664233'><pre>junit.framework.ComparisonFailure: expected:&lt;...noakfurniture.co.uk/[challenge]&gt; but was:&lt;...noakfurniture.co.uk/[account/login?return_url=%2Faccount]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at com.project.rll.steps.LoginStepDefs.verify_user_is_able_to_login_checking(LoginStepDefs.java:60)
+	at ✽.verify user is able to login checking &quot;https://www.chilternoakfurniture.co.uk/account/login?return_url=%2Faccount&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Blogin.feature:8)
+</pre></div></td>
+<td>13</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User login with different credentials by using excel", "Login Functionality"</td>
+<td><div><pre>junit.framework.ComparisonFailure: expected:&lt;...noakfurniture.co.uk/[challenge]&gt; but was:&lt;...noakfurniture.co.uk/[account/login?return_url=%2Faccount]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at com.project.rll.steps.LoginStepDefs.verify_user_is_able_to_login_checking(LoginStepDefs.java:60)
+	at ✽.verify user is able to login checking &quot;https://www.chilternoakfurniture.co.uk/account/login?return_url=%2Faccount&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Blogin.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2143237307", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2143237307'><pre>junit.framework.ComparisonFailure: expected:&lt;...noakfurniture.co.uk/[challenge]&gt; but was:&lt;...noakfurniture.co.uk/[account/login?return_url=%2Faccount]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at com.project.rll.steps.LoginStepDefs.verify_user_is_able_to_login_checking(LoginStepDefs.java:60)
+	at ✽.verify user is able to login checking &quot;https://www.chilternoakfurniture.co.uk/account/login?return_url=%2Faccount&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Blogin.feature:8)
+</pre></div></td>
+<td>12</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To test the SigUp functionality of Chiltern Oak page", "SignUp fuctionality"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;New customer? Sign up for an account&quot;}
+  (Session info: chrome=122.0.6261.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [bc203e57972b15dd9d54d2b868949650, findElement {using=link text, value=New customer? Sign up for an account}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61205}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61205/devtoo..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: bc203e57972b15dd9d54d2b868949650
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.click(Unknown Source)
+	at com.project.rll.pages.SignUpPage.clicSignUpLink(SignUpPage.java:56)
+	at com.project.rll.steps.SignUpStepDefs.user_navigates_to_the_signup_page(SignUpStepDefs.java:21)
+	at ✽.user navigates to the signup page(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Asignup.feature:5)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace538475984", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace538475984'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;New customer? Sign up for an account&quot;}
+  (Session info: chrome=122.0.6261.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [bc203e57972b15dd9d54d2b868949650, findElement {using=link text, value=New customer? Sign up for an account}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61205}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61205/devtoo..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: bc203e57972b15dd9d54d2b868949650
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.click(Unknown Source)
+	at com.project.rll.pages.SignUpPage.clicSignUpLink(SignUpPage.java:56)
+	at com.project.rll.steps.SignUpStepDefs.user_navigates_to_the_signup_page(SignUpStepDefs.java:21)
+	at ✽.user navigates to the signup page(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Asignup.feature:5)
+</pre></div></td>
+<td>15</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User login with different credentials by using excel", "Login Functionality"</td>
+<td><div><pre>junit.framework.ComparisonFailure: expected:&lt;...noakfurniture.co.uk/[challenge]&gt; but was:&lt;...noakfurniture.co.uk/[account/login?return_url=%2Faccount]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at com.project.rll.steps.LoginStepDefs.verify_user_is_able_to_login_checking(LoginStepDefs.java:60)
+	at ✽.verify user is able to login checking &quot;https://www.chilternoakfurniture.co.uk/account/login?return_url=%2Faccount&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Blogin.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace398110768", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace398110768'><pre>junit.framework.ComparisonFailure: expected:&lt;...noakfurniture.co.uk/[challenge]&gt; but was:&lt;...noakfurniture.co.uk/[account/login?return_url=%2Faccount]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at com.project.rll.steps.LoginStepDefs.verify_user_is_able_to_login_checking(LoginStepDefs.java:60)
+	at ✽.verify user is able to login checking &quot;https://www.chilternoakfurniture.co.uk/account/login?return_url=%2Faccount&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Blogin.feature:8)
+</pre></div></td>
+<td>33</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To test the SigUp functionality of Chiltern Oak page", "SignUp fuctionality"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;errors&apos;]/ul/li&quot;}
+  (Session info: chrome=122.0.6261.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d55839bc9de84011716e149295409dea, findElement {using=xpath, value=//div[@class=&apos;errors&apos;]/ul/li}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61460}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61460/devtoo..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d55839bc9de84011716e149295409dea
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.getText(Unknown Source)
+	at com.project.rll.pages.SignUpPage.validate_confirm(SignUpPage.java:104)
+	at com.project.rll.steps.SignUpStepDefs.the_user_should_see_the_status_as(SignUpStepDefs.java:63)
+	at ✽.the user should see the status as &quot;Password can&apos;t be blank.&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Asignup.feature:11)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2111986153", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2111986153'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;errors&apos;]/ul/li&quot;}
+  (Session info: chrome=122.0.6261.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d55839bc9de84011716e149295409dea, findElement {using=xpath, value=//div[@class=&apos;errors&apos;]/ul/li}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61460}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61460/devtoo..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d55839bc9de84011716e149295409dea
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.getText(Unknown Source)
+	at com.project.rll.pages.SignUpPage.validate_confirm(SignUpPage.java:104)
+	at com.project.rll.steps.SignUpStepDefs.the_user_should_see_the_status_as(SignUpStepDefs.java:63)
+	at ✽.the user should see the status as &quot;Password can&apos;t be blank.&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Asignup.feature:11)
+</pre></div></td>
+<td>27</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To test the SigUp functionality of Chiltern Oak page", "SignUp fuctionality"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;errors&apos;]/ul/li&quot;}
+  (Session info: chrome=122.0.6261.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [885fbf0a12fe90094d7ade89bed98937, findElement {using=xpath, value=//div[@class=&apos;errors&apos;]/ul/li}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59784}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59784/devtoo..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 885fbf0a12fe90094d7ade89bed98937
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.getText(Unknown Source)
+	at com.project.rll.pages.SignUpPage.validate_confirm(SignUpPage.java:104)
+	at com.project.rll.steps.SignUpStepDefs.the_user_should_see_the_status_as(SignUpStepDefs.java:63)
+	at ✽.the user should see the status as &quot;Email can&apos;t be blanK.&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Asignup.feature:11)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1175056541", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1175056541'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;errors&apos;]/ul/li&quot;}
+  (Session info: chrome=122.0.6261.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [885fbf0a12fe90094d7ade89bed98937, findElement {using=xpath, value=//div[@class=&apos;errors&apos;]/ul/li}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59784}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59784/devtoo..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 885fbf0a12fe90094d7ade89bed98937
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.getText(Unknown Source)
+	at com.project.rll.pages.SignUpPage.validate_confirm(SignUpPage.java:104)
+	at com.project.rll.steps.SignUpStepDefs.the_user_should_see_the_status_as(SignUpStepDefs.java:63)
+	at ✽.the user should see the status as &quot;Email can&apos;t be blanK.&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Asignup.feature:11)
+</pre></div></td>
+<td>26</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To test the SigUp functionality of Chiltern Oak page", "SignUp fuctionality"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;New customer? Sign up for an account&quot;}
+  (Session info: chrome=122.0.6261.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [367bbf11942d1edf21ce8485ac286d46, findElement {using=link text, value=New customer? Sign up for an account}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60743}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60743/devtoo..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 367bbf11942d1edf21ce8485ac286d46
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.click(Unknown Source)
+	at com.project.rll.pages.SignUpPage.clicSignUpLink(SignUpPage.java:56)
+	at com.project.rll.steps.SignUpStepDefs.user_navigates_to_the_signup_page(SignUpStepDefs.java:21)
+	at ✽.user navigates to the signup page(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Asignup.feature:5)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace586362150", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace586362150'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;New customer? Sign up for an account&quot;}
+  (Session info: chrome=122.0.6261.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [367bbf11942d1edf21ce8485ac286d46, findElement {using=link text, value=New customer? Sign up for an account}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60743}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60743/devtoo..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 367bbf11942d1edf21ce8485ac286d46
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.click(Unknown Source)
+	at com.project.rll.pages.SignUpPage.clicSignUpLink(SignUpPage.java:56)
+	at com.project.rll.steps.SignUpStepDefs.user_navigates_to_the_signup_page(SignUpStepDefs.java:21)
+	at ✽.user navigates to the signup page(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Asignup.feature:5)
+</pre></div></td>
+<td>35</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To test the SigUp functionality of Chiltern Oak page", "SignUp fuctionality"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;errors&apos;]/ul/li&quot;}
+  (Session info: chrome=122.0.6261.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [da356fe2c18c8fd031964a960ca6fc6c, findElement {using=xpath, value=//div[@class=&apos;errors&apos;]/ul/li}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59360}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59360/devtoo..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: da356fe2c18c8fd031964a960ca6fc6c
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.getText(Unknown Source)
+	at com.project.rll.pages.SignUpPage.validate_confirm(SignUpPage.java:104)
+	at com.project.rll.steps.SignUpStepDefs.the_user_should_see_the_status_as(SignUpStepDefs.java:63)
+	at ✽.the user should see the status as &quot;Password is too short (minimum is 5 characters)&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Asignup.feature:11)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2138906599", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2138906599'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;errors&apos;]/ul/li&quot;}
+  (Session info: chrome=122.0.6261.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [da356fe2c18c8fd031964a960ca6fc6c, findElement {using=xpath, value=//div[@class=&apos;errors&apos;]/ul/li}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59360}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59360/devtoo..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: da356fe2c18c8fd031964a960ca6fc6c
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.getText(Unknown Source)
+	at com.project.rll.pages.SignUpPage.validate_confirm(SignUpPage.java:104)
+	at com.project.rll.steps.SignUpStepDefs.the_user_should_see_the_status_as(SignUpStepDefs.java:63)
+	at ✽.the user should see the status as &quot;Password is too short (minimum is 5 characters)&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Asignup.feature:11)
+</pre></div></td>
+<td>23</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To test the SigUp functionality of Chiltern Oak page", "SignUp fuctionality"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;New customer? Sign up for an account&quot;}
+  (Session info: chrome=122.0.6261.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6877f83a4c704a86ae50a0b978d8ba4a, findElement {using=link text, value=New customer? Sign up for an account}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61323}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61323/devtoo..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6877f83a4c704a86ae50a0b978d8ba4a
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.click(Unknown Source)
+	at com.project.rll.pages.SignUpPage.clicSignUpLink(SignUpPage.java:56)
+	at com.project.rll.steps.SignUpStepDefs.user_navigates_to_the_signup_page(SignUpStepDefs.java:21)
+	at ✽.user navigates to the signup page(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Asignup.feature:5)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace657487595", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace657487595'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;New customer? Sign up for an account&quot;}
+  (Session info: chrome=122.0.6261.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6877f83a4c704a86ae50a0b978d8ba4a, findElement {using=link text, value=New customer? Sign up for an account}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61323}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61323/devtoo..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6877f83a4c704a86ae50a0b978d8ba4a
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.click(Unknown Source)
+	at com.project.rll.pages.SignUpPage.clicSignUpLink(SignUpPage.java:56)
+	at com.project.rll.steps.SignUpStepDefs.user_navigates_to_the_signup_page(SignUpStepDefs.java:21)
+	at ✽.user navigates to the signup page(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Asignup.feature:5)
+</pre></div></td>
+<td>32</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To test the SigUp functionality of Chiltern Oak page", "SignUp fuctionality"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;errors&apos;]/ul/li&quot;}
+  (Session info: chrome=122.0.6261.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [55c8350fd6858e0263d199aab6f21117, findElement {using=xpath, value=//div[@class=&apos;errors&apos;]/ul/li}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59175}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59175/devtoo..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 55c8350fd6858e0263d199aab6f21117
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.getText(Unknown Source)
+	at com.project.rll.pages.SignUpPage.validate_confirm(SignUpPage.java:104)
+	at com.project.rll.steps.SignUpStepDefs.the_user_should_see_the_status_as(SignUpStepDefs.java:63)
+	at ✽.the user should see the status as &quot;Password is too short (minimum is 5 characters)&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Asignup.feature:11)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2081005908", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2081005908'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;errors&apos;]/ul/li&quot;}
+  (Session info: chrome=122.0.6261.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [55c8350fd6858e0263d199aab6f21117, findElement {using=xpath, value=//div[@class=&apos;errors&apos;]/ul/li}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59175}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59175/devtoo..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 55c8350fd6858e0263d199aab6f21117
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.getText(Unknown Source)
+	at com.project.rll.pages.SignUpPage.validate_confirm(SignUpPage.java:104)
+	at com.project.rll.steps.SignUpStepDefs.the_user_should_see_the_status_as(SignUpStepDefs.java:63)
+	at ✽.the user should see the status as &quot;Password is too short (minimum is 5 characters)&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Asignup.feature:11)
+</pre></div></td>
+<td>44</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User login with different credentials by using excel", "Login Functionality"</td>
+<td><div><pre>junit.framework.ComparisonFailure: expected:&lt;...niture.co.uk/account[/login?return_url=%2Faccount]&gt; but was:&lt;...niture.co.uk/account[]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at com.project.rll.steps.LoginStepDefs.verify_user_is_able_to_login_checking(LoginStepDefs.java:60)
+	at ✽.verify user is able to login checking &quot;https://www.chilternoakfurniture.co.uk/account&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Blogin.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace876249767", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace876249767'><pre>junit.framework.ComparisonFailure: expected:&lt;...niture.co.uk/account[/login?return_url=%2Faccount]&gt; but was:&lt;...niture.co.uk/account[]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at com.project.rll.steps.LoginStepDefs.verify_user_is_able_to_login_checking(LoginStepDefs.java:60)
+	at ✽.verify user is able to login checking &quot;https://www.chilternoakfurniture.co.uk/account&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Blogin.feature:8)
+</pre></div></td>
+<td>10</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User login with different credentials by using excel", "Login Functionality"</td>
+<td><div><pre>junit.framework.ComparisonFailure: expected:&lt;...noakfurniture.co.uk/[challenge]&gt; but was:&lt;...noakfurniture.co.uk/[account/login?return_url=%2Faccount]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at com.project.rll.steps.LoginStepDefs.verify_user_is_able_to_login_checking(LoginStepDefs.java:60)
+	at ✽.verify user is able to login checking &quot;https://www.chilternoakfurniture.co.uk/account/login?return_url=%2Faccount&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Blogin.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1171002707", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1171002707'><pre>junit.framework.ComparisonFailure: expected:&lt;...noakfurniture.co.uk/[challenge]&gt; but was:&lt;...noakfurniture.co.uk/[account/login?return_url=%2Faccount]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at com.project.rll.steps.LoginStepDefs.verify_user_is_able_to_login_checking(LoginStepDefs.java:60)
+	at ✽.verify user is able to login checking &quot;https://www.chilternoakfurniture.co.uk/account/login?return_url=%2Faccount&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Blogin.feature:8)
+</pre></div></td>
+<td>13</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To test the SigUp functionality of Chiltern Oak page", "SignUp fuctionality"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;errors&apos;]/ul/li&quot;}
+  (Session info: chrome=122.0.6261.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [007f3682e1a90e215c04f32e7f9b0820, findElement {using=xpath, value=//div[@class=&apos;errors&apos;]/ul/li}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61761}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61761/devtoo..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 007f3682e1a90e215c04f32e7f9b0820
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.getText(Unknown Source)
+	at com.project.rll.pages.SignUpPage.validate_confirm(SignUpPage.java:104)
+	at com.project.rll.steps.SignUpStepDefs.the_user_should_see_the_status_as(SignUpStepDefs.java:63)
+	at ✽.the user should see the status as &quot;This email address is already associated with an account.&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Asignup.feature:11)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1730802123", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1730802123'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;errors&apos;]/ul/li&quot;}
+  (Session info: chrome=122.0.6261.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [007f3682e1a90e215c04f32e7f9b0820, findElement {using=xpath, value=//div[@class=&apos;errors&apos;]/ul/li}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61761}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61761/devtoo..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 007f3682e1a90e215c04f32e7f9b0820
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.getText(Unknown Source)
+	at com.project.rll.pages.SignUpPage.validate_confirm(SignUpPage.java:104)
+	at com.project.rll.steps.SignUpStepDefs.the_user_should_see_the_status_as(SignUpStepDefs.java:63)
+	at ✽.the user should see the status as &quot;This email address is already associated with an account.&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Asignup.feature:11)
+</pre></div></td>
+<td>25</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User login with different credentials by using excel", "Login Functionality"</td>
+<td><div><pre>junit.framework.ComparisonFailure: expected:&lt;...niture.co.uk/account[/login?return_url=%2Faccount]&gt; but was:&lt;...niture.co.uk/account[]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at com.project.rll.steps.LoginStepDefs.verify_user_is_able_to_login_checking(LoginStepDefs.java:60)
+	at ✽.verify user is able to login checking &quot;https://www.chilternoakfurniture.co.uk/account&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Blogin.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1842294186", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1842294186'><pre>junit.framework.ComparisonFailure: expected:&lt;...niture.co.uk/account[/login?return_url=%2Faccount]&gt; but was:&lt;...niture.co.uk/account[]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at com.project.rll.steps.LoginStepDefs.verify_user_is_able_to_login_checking(LoginStepDefs.java:60)
+	at ✽.verify user is able to login checking &quot;https://www.chilternoakfurniture.co.uk/account&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Blogin.feature:8)
+</pre></div></td>
+<td>29</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To test the SigUp functionality of Chiltern Oak page", "SignUp fuctionality"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;errors&apos;]/ul/li&quot;}
+  (Session info: chrome=122.0.6261.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [285e65c278c3ad7418bd0b381b819e27, findElement {using=xpath, value=//div[@class=&apos;errors&apos;]/ul/li}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59607}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59607/devtoo..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 285e65c278c3ad7418bd0b381b819e27
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.getText(Unknown Source)
+	at com.project.rll.pages.SignUpPage.validate_confirm(SignUpPage.java:104)
+	at com.project.rll.steps.SignUpStepDefs.the_user_should_see_the_status_as(SignUpStepDefs.java:63)
+	at ✽.the user should see the status as &quot;Email can&apos;t be blanK.&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Asignup.feature:11)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1120001382", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1120001382'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;errors&apos;]/ul/li&quot;}
+  (Session info: chrome=122.0.6261.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [285e65c278c3ad7418bd0b381b819e27, findElement {using=xpath, value=//div[@class=&apos;errors&apos;]/ul/li}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59607}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59607/devtoo..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 285e65c278c3ad7418bd0b381b819e27
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.getText(Unknown Source)
+	at com.project.rll.pages.SignUpPage.validate_confirm(SignUpPage.java:104)
+	at com.project.rll.steps.SignUpStepDefs.the_user_should_see_the_status_as(SignUpStepDefs.java:63)
+	at ✽.the user should see the status as &quot;Email can&apos;t be blanK.&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Asignup.feature:11)
+</pre></div></td>
+<td>28</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To test the SigUp functionality of Chiltern Oak page", "SignUp fuctionality"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;errors&apos;]/ul/li&quot;}
+  (Session info: chrome=122.0.6261.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [78e39a2729373e1ca7f69545cbb42338, findElement {using=xpath, value=//div[@class=&apos;errors&apos;]/ul/li}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60365}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60365/devtoo..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 78e39a2729373e1ca7f69545cbb42338
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.getText(Unknown Source)
+	at com.project.rll.pages.SignUpPage.validate_confirm(SignUpPage.java:104)
+	at com.project.rll.steps.SignUpStepDefs.the_user_should_see_the_status_as(SignUpStepDefs.java:63)
+	at ✽.the user should see the status as &quot;This email address is already associated with an account.&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Asignup.feature:11)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1860092089", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1860092089'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;errors&apos;]/ul/li&quot;}
+  (Session info: chrome=122.0.6261.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [78e39a2729373e1ca7f69545cbb42338, findElement {using=xpath, value=//div[@class=&apos;errors&apos;]/ul/li}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60365}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60365/devtoo..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 78e39a2729373e1ca7f69545cbb42338
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.getText(Unknown Source)
+	at com.project.rll.pages.SignUpPage.validate_confirm(SignUpPage.java:104)
+	at com.project.rll.steps.SignUpStepDefs.the_user_should_see_the_status_as(SignUpStepDefs.java:63)
+	at ✽.the user should see the status as &quot;This email address is already associated with an account.&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Asignup.feature:11)
+</pre></div></td>
+<td>55</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To test the SigUp functionality of Chiltern Oak page", "SignUp fuctionality"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;errors&apos;]/ul/li&quot;}
+  (Session info: chrome=122.0.6261.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3c9f1a3a3b2537d6567f7b255811cad9, findElement {using=xpath, value=//div[@class=&apos;errors&apos;]/ul/li}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62067}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62067/devtoo..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3c9f1a3a3b2537d6567f7b255811cad9
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.getText(Unknown Source)
+	at com.project.rll.pages.SignUpPage.validate_confirm(SignUpPage.java:104)
+	at com.project.rll.steps.SignUpStepDefs.the_user_should_see_the_status_as(SignUpStepDefs.java:63)
+	at ✽.the user should see the status as &quot;This email address is already associated with an account.&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Asignup.feature:11)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace36807510", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace36807510'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;errors&apos;]/ul/li&quot;}
+  (Session info: chrome=122.0.6261.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3c9f1a3a3b2537d6567f7b255811cad9, findElement {using=xpath, value=//div[@class=&apos;errors&apos;]/ul/li}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62067}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62067/devtoo..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3c9f1a3a3b2537d6567f7b255811cad9
+	at jdk.internal.reflect.GeneratedConstructorAccessor50.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.getText(Unknown Source)
+	at com.project.rll.pages.SignUpPage.validate_confirm(SignUpPage.java:104)
+	at com.project.rll.steps.SignUpStepDefs.the_user_should_see_the_status_as(SignUpStepDefs.java:63)
+	at ✽.the user should see the status as &quot;This email address is already associated with an account.&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Asignup.feature:11)
+</pre></div></td>
+<td>44</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To test the SigUp functionality of Chiltern Oak page", "SignUp fuctionality"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at com.project.rll.steps.SignUpStepDefs.the_user_should_see_the_status_as(SignUpStepDefs.java:65)
+	at ✽.the user should see the status as &quot;Email can&apos;t be blanK.&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Asignup.feature:11)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1315609282", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1315609282'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1577)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at com.project.rll.steps.SignUpStepDefs.the_user_should_see_the_status_as(SignUpStepDefs.java:65)
+	at ✽.the user should see the status as &quot;Email can&apos;t be blanK.&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Asignup.feature:11)
+</pre></div></td>
+<td>28</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To test the SigUp functionality of Chiltern Oak page", "SignUp fuctionality"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;errors&apos;]/ul/li&quot;}
+  (Session info: chrome=122.0.6261.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [feff37b60316194dfdd06973ebe758fe, findElement {using=xpath, value=//div[@class=&apos;errors&apos;]/ul/li}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59030}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59030/devtoo..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: feff37b60316194dfdd06973ebe758fe
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.getText(Unknown Source)
+	at com.project.rll.pages.SignUpPage.validate_confirm(SignUpPage.java:104)
+	at com.project.rll.steps.SignUpStepDefs.the_user_should_see_the_status_as(SignUpStepDefs.java:63)
+	at ✽.the user should see the status as &quot;Password is too short (minimum is 5 characters)&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Asignup.feature:11)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1219777373", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1219777373'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;errors&apos;]/ul/li&quot;}
+  (Session info: chrome=122.0.6261.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [feff37b60316194dfdd06973ebe758fe, findElement {using=xpath, value=//div[@class=&apos;errors&apos;]/ul/li}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59030}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59030/devtoo..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: feff37b60316194dfdd06973ebe758fe
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.getText(Unknown Source)
+	at com.project.rll.pages.SignUpPage.validate_confirm(SignUpPage.java:104)
+	at com.project.rll.steps.SignUpStepDefs.the_user_should_see_the_status_as(SignUpStepDefs.java:63)
+	at ✽.the user should see the status as &quot;Password is too short (minimum is 5 characters)&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Asignup.feature:11)
+</pre></div></td>
+<td>32</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User login with different credentials by using excel", "Login Functionality"</td>
+<td><div><pre>junit.framework.ComparisonFailure: expected:&lt;...niture.co.uk/account[/login?return_url=%2Faccount]&gt; but was:&lt;...niture.co.uk/account[]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at com.project.rll.steps.LoginStepDefs.verify_user_is_able_to_login_checking(LoginStepDefs.java:60)
+	at ✽.verify user is able to login checking &quot;https://www.chilternoakfurniture.co.uk/account&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Blogin.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1899045338", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1899045338'><pre>junit.framework.ComparisonFailure: expected:&lt;...niture.co.uk/account[/login?return_url=%2Faccount]&gt; but was:&lt;...niture.co.uk/account[]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at com.project.rll.steps.LoginStepDefs.verify_user_is_able_to_login_checking(LoginStepDefs.java:60)
+	at ✽.verify user is able to login checking &quot;https://www.chilternoakfurniture.co.uk/account&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Blogin.feature:8)
+</pre></div></td>
+<td>40</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To test the SigUp functionality of Chiltern Oak page", "SignUp fuctionality"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;errors&apos;]/ul/li&quot;}
+  (Session info: chrome=122.0.6261.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2584860f31d7c1d12223db383486d21a, findElement {using=xpath, value=//div[@class=&apos;errors&apos;]/ul/li}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61915}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61915/devtoo..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2584860f31d7c1d12223db383486d21a
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.getText(Unknown Source)
+	at com.project.rll.pages.SignUpPage.validate_confirm(SignUpPage.java:104)
+	at com.project.rll.steps.SignUpStepDefs.the_user_should_see_the_status_as(SignUpStepDefs.java:63)
+	at ✽.the user should see the status as &quot;This email address is already associated with an account.&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Asignup.feature:11)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2099885265", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2099885265'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;errors&apos;]/ul/li&quot;}
+  (Session info: chrome=122.0.6261.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2584860f31d7c1d12223db383486d21a, findElement {using=xpath, value=//div[@class=&apos;errors&apos;]/ul/li}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61915}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61915/devtoo..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2584860f31d7c1d12223db383486d21a
+	at jdk.internal.reflect.GeneratedConstructorAccessor50.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.getText(Unknown Source)
+	at com.project.rll.pages.SignUpPage.validate_confirm(SignUpPage.java:104)
+	at com.project.rll.steps.SignUpStepDefs.the_user_should_see_the_status_as(SignUpStepDefs.java:63)
+	at ✽.the user should see the status as &quot;This email address is already associated with an account.&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Asignup.feature:11)
+</pre></div></td>
+<td>26</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To test the SigUp functionality of Chiltern Oak page", "SignUp fuctionality"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;errors&apos;]/ul/li&quot;}
+  (Session info: chrome=122.0.6261.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3adc020f76947a2c2bbfae9bd2bcd19f, findElement {using=xpath, value=//div[@class=&apos;errors&apos;]/ul/li}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60229}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60229/devtoo..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3adc020f76947a2c2bbfae9bd2bcd19f
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.getText(Unknown Source)
+	at com.project.rll.pages.SignUpPage.validate_confirm(SignUpPage.java:104)
+	at com.project.rll.steps.SignUpStepDefs.the_user_should_see_the_status_as(SignUpStepDefs.java:63)
+	at ✽.the user should see the status as &quot;This email address is already associated with an account.&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Asignup.feature:11)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace917253719", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace917253719'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;errors&apos;]/ul/li&quot;}
+  (Session info: chrome=122.0.6261.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3adc020f76947a2c2bbfae9bd2bcd19f, findElement {using=xpath, value=//div[@class=&apos;errors&apos;]/ul/li}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60229}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60229/devtoo..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3adc020f76947a2c2bbfae9bd2bcd19f
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.getText(Unknown Source)
+	at com.project.rll.pages.SignUpPage.validate_confirm(SignUpPage.java:104)
+	at com.project.rll.steps.SignUpStepDefs.the_user_should_see_the_status_as(SignUpStepDefs.java:63)
+	at ✽.the user should see the status as &quot;This email address is already associated with an account.&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Asignup.feature:11)
+</pre></div></td>
+<td>27</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+<tr>
+<td title='com.project.rll.runners.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.project.rll.runners.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User login with different credentials by using excel", "Login Functionality"</td>
+<td><div><pre>junit.framework.ComparisonFailure: expected:&lt;...noakfurniture.co.uk/[challenge]&gt; but was:&lt;...noakfurniture.co.uk/[account/login?return_url=%2Faccount]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at com.project.rll.steps.LoginStepDefs.verify_user_is_able_to_login_checking(LoginStepDefs.java:60)
+	at ✽.verify user is able to login checking &quot;https://www.chilternoakfurniture.co.uk/account/login?return_url=%2Faccount&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Blogin.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace179467597", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace179467597'><pre>junit.framework.ComparisonFailure: expected:&lt;...noakfurniture.co.uk/[challenge]&gt; but was:&lt;...noakfurniture.co.uk/[account/login?return_url=%2Faccount]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at com.project.rll.steps.LoginStepDefs.verify_user_is_able_to_login_checking(LoginStepDefs.java:60)
+	at ✽.verify user is able to login checking &quot;https://www.chilternoakfurniture.co.uk/account/login?return_url=%2Faccount&quot;(file:///C:/Users/Karthik/eclipse-workspace/Chiltern-Oak/src/test/resource/Features/Blogin.feature:8)
+</pre></div></td>
+<td>52</td>
+<td>com.project.rll.runners.TestNgRunner@7d900ecf</td></tr>
+</table><p>
+</body>
+</html>

@@ -1,0 +1,40 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 34, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 815.201 s <<< FAILURE! - in TestSuite
+runScenario(com.project.rll.runners.TestNgRunner)  Time elapsed: 30.147 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='errors']/ul/li"}
+  (Session info: chrome=122.0.6261.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [08e6a691c571adc784e9c5b360ab2cf1, findElement {using=xpath, value=//div[@class='errors']/ul/li}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:1218}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:1218/devtool..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 08e6a691c571adc784e9c5b360ab2cf1
+
+runScenario(com.project.rll.runners.TestNgRunner)  Time elapsed: 29.684 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='errors']/ul/li"}
+  (Session info: chrome=122.0.6261.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c9215ffb11e704ae7df073b4e8f1ced9, findElement {using=xpath, value=//div[@class='errors']/ul/li}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:1701}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:1701/devtool..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c9215ffb11e704ae7df073b4e8f1ced9
+
+runScenario(com.project.rll.runners.TestNgRunner)  Time elapsed: 16.837 s  <<< FAILURE!
+junit.framework.ComparisonFailure: expected:<...noakfurniture.co.uk/[challenge]> but was:<...noakfurniture.co.uk/[account/login?return_url=%2Faccount]>
+
+runScenario(com.project.rll.runners.TestNgRunner)  Time elapsed: 16.946 s  <<< FAILURE!
+junit.framework.ComparisonFailure: expected:<...noakfurniture.co.uk/[challenge]> but was:<...noakfurniture.co.uk/[account/login?return_url=%2Faccount]>
+
+runScenario(com.project.rll.runners.TestNgRunner)  Time elapsed: 12.382 s  <<< FAILURE!
+junit.framework.ComparisonFailure: expected:<...niture.co.uk/account[/login?return_url=%2Faccount]> but was:<...niture.co.uk/account[]>
+
+runScenario(com.project.rll.runners.TestNgRunner)  Time elapsed: 79.99 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<...noakfurniture.co.uk/[challenge]#footer_signup_form> but was:<...noakfurniture.co.uk/[?contact%5Btags%5D=prospect%2Cnewsletter&form_type=customer]#footer_signup_form>
+
